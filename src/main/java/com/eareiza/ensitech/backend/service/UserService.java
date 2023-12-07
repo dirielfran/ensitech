@@ -2,7 +2,7 @@ package com.eareiza.ensitech.backend.service;
 
 import com.eareiza.ensitech.backend.interfeces.IUserService;
 import com.eareiza.ensitech.backend.model.User;
-import com.eareiza.ensitech.backend.repository.UserRepository;
+import com.eareiza.ensitech.backend.repository.IUserRepository;
 import com.eareiza.ensitech.backend.utileria.Utileria;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,18 +16,21 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class UserService extends CommonServiceImpl<User, UserRepository> implements IUserService, UserDetailsService {
+public class UserService extends CommonServiceImpl<User, IUserRepository> implements IUserService, UserDetailsService {
 
     @Autowired
-    private UserRepository userRepository;
+    private IUserRepository userRepository;
+
+
 
     private Logger logger = LoggerFactory.getLogger(UserService.class);
 
     private final Utileria util= new Utileria();
+
+
 
     @Override
     @Transactional(readOnly = true)

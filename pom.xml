@@ -66,6 +66,13 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.demo</groupId>
+			<artifactId>MarvelProject</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/MarvelProject-0.0.2-SNAPSHOT.jar</systemPath>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -23,7 +23,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 	public void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests().antMatchers("/h2-console/**").permitAll()
 		.anyRequest().authenticated();
-
 		// disables the X-Frame-Options header to allow the H2 console to be displayed in an iframe
 		http.headers().frameOptions().disable();
 	}
