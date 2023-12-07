@@ -73,6 +73,18 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/MarvelProject-0.0.2-SNAPSHOT.jar</systemPath>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version> <!-- O la versión más reciente -->
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>3.12.4</version> <!-- O la versión más reciente -->
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

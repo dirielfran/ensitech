@@ -11,7 +11,4 @@ import java.util.List;
 @RequestMapping("api/users")
 public class UserController  extends CommonController<User, IUserService>{
 
-    @Autowired
-    private IUserService iUserService;
-
 }

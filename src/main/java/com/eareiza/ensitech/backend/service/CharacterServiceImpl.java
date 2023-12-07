@@ -44,6 +44,7 @@ public class CharacterServiceImpl extends CommonServiceImpl<CharacterRegistry, I
         return ResponseCharacterDto.builder().comics(comicDtos).totalRecords(marvelDTO.getData().getTotal()).build();
     }
 
+
     private void saveRegistry(String etag){
         CharacterRegistry characterRegistry = CharacterRegistry.builder()
                 .type(TypeServiceEnum.SERVICEALL.getState())
