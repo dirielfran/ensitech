@@ -1,5 +1,6 @@
 package com.eareiza.ensitech.backend.model;
 
+import com.eareiza.ensitech.backend.enums.TypeServiceEnum;
 import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 
@@ -17,5 +18,6 @@ import java.io.Serializable;
 @Table(name="character")
 @SQLDelete(sql = "UPDATE character SET enabled=false WHERE id = ?")
 public class CharacterRegistry extends EntityCommon implements Serializable {
-    private String urlService;
+    private String etag;
+    private String type;
 }
